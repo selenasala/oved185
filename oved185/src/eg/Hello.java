@@ -1,10 +1,11 @@
 package eg;
 
+//import java.time.*//per importare tutto il package time
 import java.time.LocalDate;
 import java.time.Month;
 
 public class Hello {
 	public static void main(String[] args) {
-		System.out.println("Hello @" + LocalDate.of(2018, Month.DECEMBER, 5));
+		System.out.println("Hello @" + LocalDate.of(2018, Month.DECEMBER, 6));
 	}
 }
