@@ -17,7 +17,7 @@ public class Cage<T extends Animal>
 	//sappiamo che animale è solo quando la gabbia viene creata. non so che animale sia(zebra o rinoceronte), sappiamo solo che è un animla eper questo ho scritto <animale>
 	
 	private int id;
-	private int max; //id e max vanno inizializzati. dobbimao chiederloa ll'utente di questa classe
+	private int max; //id e max vanno inizializzati. dobbimao chiederlo all'utente di questa classe
 	// è giusto che sia responsabilità della gabbia valutare il suo massimo. l' id mi arriva dal programma e ci vuole qualcosa che mi dica che veramente incrementi l id. è la classe cage che si gestisce l id. 
 	//cage ha dentro di sè un contatore che mi gestisca il numero di gabbie che entrano. : 1 caso cpon contatore interno
 	//in cage anche se togli una gabbia, l id non cambia. è di cage la responsabilità, quindi spetta a lei mettere il contatore.
@@ -44,6 +44,7 @@ public class Cage<T extends Animal>
 	//prende l input in T 
 	//public void add(T animal)//meglio non far ritornare void, vogliamo un booleano
 	public boolean add(T animal) {
+		//TODO la add deve cambiare la sua funzionalità
  if(max==guests.size()) {//max non sarà più di size perchè il controllo si ferma prima. così controllo che non superi il valore massimo.
 	 return false;
                         }
@@ -74,10 +75,12 @@ public class Cage<T extends Animal>
 	//voglio che la remove mi tornasse dentro l animale. lo inscatolo dentro l optional, che è un contenitore piccolo( 0 elemnto o 1 elemnto).
 	//se in optional voglio qualcosa, chiamo il metodo of.
 	
+	
+	//check per vedere se l'animale è presente
 	@Override
 	public String toString() {
 		
 		return "{Cage" + id + ":" + guests + "}";
 	}
-	
+	//toString è definita da object: mi stampa l indirizzo di memoria di quell'oggetto. 
 	}

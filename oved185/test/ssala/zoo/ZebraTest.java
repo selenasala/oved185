@@ -13,6 +13,10 @@ class ZebraTest {
 		Zebra genoveffa = new Zebra("genoveffa");
 		assertEquals("genoveffa", genoveffa.getName());
 	}
+	void createAnimal() {
+		Zebra olga = new Zebra("olga");
+		assertEquals ("olga", olga.getName());
+	}
 
 
 }
